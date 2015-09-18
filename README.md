@@ -5,6 +5,8 @@ This package is stripped from [meteor/meteor](https://atmospherejs.com/meteor/me
 
 **Note:** This package is only for client-side usage.
 
+**Important:** This branch relies on [aleclarson/react-native#unstable](http://github.com/aleclarson/react-native/tree/unstable).
+
 &nbsp;
 
 ## usage
