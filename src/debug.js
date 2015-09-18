@@ -34,7 +34,7 @@ Meteor._debug = function (/* arguments */) {
   }
   if (error) {
     if (ExceptionsManager) {
-      ExceptionsManager.handleException(error, true);
+      ExceptionsManager.reportException(error, true);
     } else {
       console.error(error);
     }
