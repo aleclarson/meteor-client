@@ -23,6 +23,8 @@ Meteor.connect('ws://localhost:3000/websocket');
 
 Learn more about Meteor [here](http://docs.meteor.com/).
 
+See all packages that are compatible with React Native and NodeJS [here](https://github.com/aleclarson/meteor-client/wiki/Available-Packages).
+
 &nbsp;
 
 ## install
