@@ -25,19 +25,17 @@ Meteor._debug = function (/* arguments */) {
     suppress--;
     return;
   }
-  var error = null;
   for (var i = 0; i < arguments.length; i++) {
-    if (arguments[i] instanceof Error) {
-      error = arguments[i];
-      break;
+    if ( !(arguments[i] instanceof Error) ) {
+      continue;
     }
-  }
-  if (error) {
+    var error = arguments[i];
     if (ExceptionsManager) {
       ExceptionsManager.reportException(error, true);
     } else {
       console.error(error);
     }
+    return;
   }
   if (typeof console !== 'undefined' &&
       typeof console.log !== 'undefined') {
