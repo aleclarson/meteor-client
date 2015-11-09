@@ -33,6 +33,8 @@ Meteor._debug = function (/* arguments */) {
     var error = arguments[i];
     if (isDev) {
       ExceptionsManager.reportException(error, true);
+    } else if (isNodeEnv) {
+      throw error;
     } else {
       console.error(error);
     }
