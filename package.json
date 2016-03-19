@@ -3,7 +3,8 @@
   "version": "1.1.7",
   "description": "The client-side core of Meteor",
   "dependencies": {
-    "is-node-env": "aleclarson/is-node-env#1.0.0",
+    "isDev": "aleclarson/isDev#1.0.0",
+    "isNodeJS": "aleclarson/isNodeJS#1.0.0",
     "underscore": "aleclarson/underscore#1.5.2"
   }
 }

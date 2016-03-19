@@ -1,8 +1,8 @@
 
-var isNodeEnv = require('is-node-env');
-var isDev = !isNodeEnv && __DEV__;
+var isNodeJS = require('isNodeJS');
+var isDev = require('isDev');
 
-if (isDev) {
+if (!isNodeJS && isDev) {
   var ExceptionsManager = require('ExceptionsManager');
 }
 
@@ -31,10 +31,10 @@ Meteor._debug = function (/* arguments */) {
       continue;
     }
     var error = arguments[i];
-    if (isDev) {
-      ExceptionsManager.reportException(error, true);
-    } else if (isNodeEnv) {
+    if (isNodeJS) {
       throw error;
+    } else if (isDev) {
+      ExceptionsManager.reportException(error, true);
     } else {
       console.error(error);
     }
