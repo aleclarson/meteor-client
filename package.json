@@ -5,6 +5,7 @@
   "dependencies": {
     "isDev": "aleclarson/isDev#1.0.0",
     "isNodeJS": "aleclarson/isNodeJS#1.0.0",
+    "isReactNative": "aleclarson/isReactNative#1.0.0",
     "underscore": "aleclarson/underscore#1.5.2"
   }
 }

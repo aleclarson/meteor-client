@@ -1,8 +1,9 @@
 
-var isNodeJS = require('isNodeJS');
-var isDev = require('isDev');
+require('isDev');
+require('isNodeJS');
+require('isReactNative');
 
-if (!isNodeJS && isDev) {
+if (isDev && isReactNative) {
   var ExceptionsManager = require('ExceptionsManager');
 }
 
